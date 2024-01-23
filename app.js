@@ -17,7 +17,6 @@ app.get('/usuarios', (req, res) => {
 })
 
 app.post('/usuarios', (req, res) => {
-    console.log(req.body)
     const nuevoUsuario = {
         id: usuarios.length + 1,
         nombre: req.body.nombre,
