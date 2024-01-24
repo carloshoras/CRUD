@@ -26,10 +26,17 @@ app.post('/usuarios', (req, res) => {
     usuarios.push(nuevoUsuario);
 })
 
+//esto es una url dinamica, y lo que va con : es comodín
 app.get('/usuarios/:nombre', (req, res) => {
     res.json(usuarios.find((usuario) => {
         return usuario.nombre===req.params.nombre
     }))
+    /*
+    if (!usuario) {
+        necesitamos que sea json para consumirlo por el frontend.
+        res.status(404).json({mensaje: "usuario no encontrado"})
+    }
+    */
 })
 
 app.put('/usuarios/:nombre', (req, res) => {

@@ -1,3 +1,15 @@
 
 
 GET http://localhost:3000/usuarios/
+
+###
+
+POST http://localhost:3000/usuarios/
+content-type: application/json
+
+{
+    "nombre": "raX",
+    "edad": 3,
+    "lugarProcedencia": "Marianas"
+}
+
